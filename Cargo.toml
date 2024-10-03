@@ -1,6 +1,10 @@
-[package]
-name = "urljammer"
-version = "0.1.0"
+[workspace]
+members = ["server", "shortner"]
+resolver = "2"
+
+[workspace.package]
 edition = "2021"
 
-[dependencies]
+[workspace.dependencies]
+server = { path = "server" }
+shortner = { path = "shortner" }
