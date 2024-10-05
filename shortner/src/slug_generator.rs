@@ -1,12 +1,11 @@
 use std::iter::repeat_with;
 
-use crate::settings::SETTINGS;
-
-pub type ArcStr = std::sync::Arc<str>;
+use super::SETTINGS;
+use common::ArcStr;
 
 pub fn slug_generator() -> ArcStr {
     let slug: String = repeat_with(fastrand::alphanumeric)
-        .take(SETTINGS.shortner.slug_length)
+        .take(SETTINGS.shortener.slug_length)
         .collect();
     println!("Slug: {}", slug);
     slug.into()

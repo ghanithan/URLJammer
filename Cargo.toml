@@ -1,5 +1,5 @@
 [workspace]
-members = ["common", "server", "shortner"]
+members = ["common", "server", "shortner", "storage"]
 resolver = "2"
 
 [workspace.package]
@@ -13,5 +13,7 @@ common = { path = "common" }
 # External dependencies
 #
 config = "0.14.0"
-serde = "1.0.210"
+serde = { version = "1.0.210", features = ["rc"] }
 lazy_static = "1.5.0"
+strum = "0.26.3"
+strum_macros = "0.26.4"

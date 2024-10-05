@@ -1,4 +1,4 @@
-use std::env::{self, current_dir};
+use std::env::{self};
 
 use config::{Config, ConfigError, File};
 use serde::de::DeserializeOwned;

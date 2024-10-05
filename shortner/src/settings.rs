@@ -4,12 +4,13 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub(crate) struct Settings {
-    pub shortner: Shortener,
+    pub shortener: ShortenerSetting,
 }
 
 #[derive(Debug, Deserialize)]
-pub(crate) struct Shortener {
+pub(crate) struct ShortenerSetting {
     pub slug_length: usize,
+    pub base_path: String,
 }
 
 impl LoadSettings for Settings {}
