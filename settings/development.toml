@@ -3,4 +3,4 @@ base_path = "localhost:8080"
 
 [storage]
 storage_type = "LocalFs"
-storage_location = "~/urljammer/dist"
+storage_location = "/home/ghanithan/urljammer/dist"

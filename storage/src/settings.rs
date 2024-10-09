@@ -11,7 +11,7 @@ pub(crate) struct Settings {
 #[derive(Debug, Deserialize)]
 pub(crate) struct StorageSetting {
     pub storage_type: StorageType,
-    pub storage_location: String,
+    pub storage_location: ArcStr,
 }
 
 #[derive(Debug, Deserialize, EnumString)]
