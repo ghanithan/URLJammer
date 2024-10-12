@@ -1,7 +1,6 @@
 use common::{ArcStr, LoadSettings};
 use lazy_static::lazy_static;
 use serde::Deserialize;
-use strum_macros::EnumString;
 
 use super::create_enum_and_type;
 

@@ -33,7 +33,12 @@ impl HandleStorage for Storage {
         access_storage_variant!(self, create_path, slug)
     }
 
-    fn create_asset(&self, dir_path: String, content: String) -> Result<(), anyhow::Error> {
-        access_storage_variant!(self, create_asset, dir_path, content)
+    fn create_asset(
+        &self,
+        slug: String,
+        file_name: String,
+        content: &str,
+    ) -> Result<(), anyhow::Error> {
+        access_storage_variant!(self, create_asset, slug, file_name, content)
     }
 }

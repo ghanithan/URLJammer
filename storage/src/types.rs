@@ -8,7 +8,12 @@ pub trait HandleStorage {
     fn new(storage_setting: StorageSetting) -> Self;
     fn meta(&self) -> String;
     fn create_path(&self, slug: String) -> Result<String, anyhow::Error>;
-    fn create_asset(&self, dir_path: String, content: String) -> Result<(), anyhow::Error>;
+    fn create_asset(
+        &self,
+        slug: String,
+        file_name: String,
+        content: &str,
+    ) -> Result<(), anyhow::Error>;
 }
 
 #[macro_export]

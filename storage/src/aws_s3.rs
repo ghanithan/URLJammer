@@ -23,7 +23,12 @@ impl HandleStorage for AwsS3 {
         Ok("Under development".to_string())
     }
 
-    fn create_asset(&self, dir_path: String, content: String) -> Result<(), anyhow::Error> {
+    fn create_asset(
+        &self,
+        slug: String,
+        file_name: String,
+        content: &str,
+    ) -> Result<(), anyhow::Error> {
         Ok(())
     }
 }
