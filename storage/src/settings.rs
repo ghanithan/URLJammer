@@ -3,21 +3,27 @@ use lazy_static::lazy_static;
 use serde::Deserialize;
 use strum_macros::EnumString;
 
-#[derive(Debug, Deserialize)]
+use super::create_enum_and_type;
+
+use super::{AwsS3, LocalFs};
+
+#[derive(Debug, Deserialize, Clone)]
 pub(crate) struct Settings {
     pub storage: StorageSetting,
 }
 
-#[derive(Debug, Deserialize)]
-pub(crate) struct StorageSetting {
+create_enum_and_type!(
+    #[derive(Debug)]
+    pub enum Storage {
+        LocalFs(LocalFs),
+        AwsS3(AwsS3),
+    }
+);
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct StorageSetting {
     pub storage_type: StorageType,
     pub storage_location: ArcStr,
-}
-
-#[derive(Debug, Deserialize, EnumString)]
-pub enum StorageType {
-    LocalFs,
-    AwsS3,
 }
 
 impl LoadSettings for Settings {}

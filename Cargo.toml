@@ -1,5 +1,5 @@
 [workspace]
-members = ["common", "server", "shortner", "storage"]
+members = ["common", "server", "shortener", "storage"]
 resolver = "2"
 
 [workspace.package]
@@ -7,7 +7,7 @@ edition = "2021"
 
 [workspace.dependencies]
 server = { path = "server" }
-shortner = { path = "shortner" }
+shortner = { path = "shortener" }
 common = { path = "common" }
 #
 # External dependencies

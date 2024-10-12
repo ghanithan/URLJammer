@@ -6,7 +6,10 @@
 	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
 	"features": {
 		"ghcr.io/guiyomh/features/vim:0": {},
-		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {}
+		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {},
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		}
 	}
 
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.

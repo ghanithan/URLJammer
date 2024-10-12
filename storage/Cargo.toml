@@ -13,3 +13,4 @@ lazy_static.workspace = true
 serde.workspace = true
 strum_macros.workspace = true
 anyhow.workspace = true
+paste = "1.0.15"
