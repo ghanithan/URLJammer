@@ -32,6 +32,15 @@ impl HandleStorage for LocalFs {
         Ok(dir_path)
     }
 
+    ///
+    /// Method: create_asset
+    /// Arguments: slug, filename, content
+    /// Usage: This method allows the user to create a file with the content.
+    /// If the file is not existing, a new file would created with the content and
+    /// if the file already exists, the contents of the file would be cleared and
+    /// the provided content would be replaced in its place.
+    ///
+
     fn create_asset(
         &self,
         slug: String,
@@ -48,8 +57,8 @@ impl HandleStorage for LocalFs {
 
 #[cfg(test)]
 mod tests {
-    use std::fs;
     use crate::{HandleStorage, Storage};
+    use std::fs;
 
     #[test]
     fn test_create_path() {
@@ -60,7 +69,7 @@ mod tests {
         let content = r#"
             <html>
                 <body>
-                    <h1>Hello World </h1>
+                    <h1>Hello World !! </h1>
                 </body>
 
             </html>

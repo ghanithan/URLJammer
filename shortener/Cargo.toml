@@ -5,8 +5,10 @@ edition.workspace = true
 
 [dependencies]
 common.workspace = true
+storage.workspace = true
 # External dependencies
 fastrand = "2.1.1"
 config.workspace = true
 serde.workspace = true
 lazy_static.workspace = true
+anyhow.workspace = true

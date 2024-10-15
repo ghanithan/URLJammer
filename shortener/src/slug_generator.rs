@@ -1,9 +1,8 @@
 use std::iter::repeat_with;
 
 use super::SETTINGS;
-use common::ArcStr;
 
-pub fn slug_generator() -> ArcStr {
+pub fn slug_generator() -> String {
     let slug: String = repeat_with(fastrand::alphanumeric)
         .take(SETTINGS.shortener.slug_length)
         .collect();
